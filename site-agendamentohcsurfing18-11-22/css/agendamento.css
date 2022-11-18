@@ -1,0 +1,226 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,112,10,1) 46%, rgba(255,188,0,1) 100%);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+header i {
+    color: white;
+}
+
+a {
+    text-decoration: 0;
+    color: inherit;
+}
+
+header {
+    top: 0;
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Contrail One', Arial;
+    text-transform: uppercase;
+}
+
+.inicio {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    border-radius: 100%;
+}
+
+.headerconteudo {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    gap: 50px;
+}
+
+.headerlink {
+    text-decoration: 0;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.headerlink:hover {
+    color: rgb(124, 124, 124);
+}
+
+.topNav {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.alogo {
+    text-decoration: none;
+}
+
+nav#menu {
+    display: block;
+}
+
+nav#menu ul {
+    list-style: none;
+    position: relative;
+    top: -226px;
+}
+
+nav#menu li {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav#menu a:hover {
+    color: white;
+    font-size: 21px;
+    border-bottom: 1px solid black;
+    transition: border-bottom 1s;
+    transition: font-size 1s;
+}
+
+.agendamento{
+    background: rgb(209, 206, 206);
+    padding: 50px;
+    margin: 100px;
+    padding-left: 200px;
+    border-radius: 10px;
+    margin-right: 300px;
+    margin-left: 300px;
+    border: 2px black solid;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.main button{
+    background: #e68730;
+    color: #000000;
+    border: 1px black solid;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    transition: 0.5s;
+
+}
+.main button:hover{
+    background: #dd6f08;
+}
+
+footer {
+    background-color: #000000;
+    padding: 5em;
+    padding-bottom: 40px;
+    border-top: 5px solid #e68730;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer img {
+    width: 180px;
+}
+
+footer h2,
+footer p,
+footer a,
+footer span {
+    color: #d1d1d1;
+}
+
+footer h2 {
+    font-weight: 400;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer li {
+    list-style: none;
+}
+
+.footer-box {
+    width: 31%;
+    padding: 1%;
+    float: left;
+}
+
+footer .wrapper:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.company-footer {}
+
+.company-footer h2 {
+    margin-top: 0px;
+}
+
+.company-footer h2,
+.company-footer p {
+    margin-bottom: 25px;
+}
+
+.footer-list li {
+    margin-bottom: 3px;
+}
+
+.footer-list a {
+    transition: .5s;
+}
+
+.footer-list a:hover {
+    color: #fff;
+}
+
+.footer-list li:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.insta {
+    position: relative;
+    height: 25px;
+    width: 25px;
+}
+
+.estilos-footer {
+    margin-top: 0px;
+    ;
+}
+

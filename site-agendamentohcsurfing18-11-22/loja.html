@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HC</title>
+    <link rel="stylesheet" href="css/loja.css">
+    <link rel="stylesheet" href="js/scripit.js">
+
+</head>
+
+<body>
+    <header class="topNav" id="mynav">
+        <a class="inicio" href="/index.html">
+            <img src="img/hc.logo.png" width="100px"> </a>
+        <div class="headerconteudo">
+            <a class="headerlink" href="../site-agendamentohcsurfing18-11-22/index.html">Inicio</a>
+            <a class="headerlink" href="../site-agendamentohcsurfing18-11-22/cadastro.html">Cadastro</a>
+            <a class="headerlink" href="../site-agendamentohcsurfing18-11-22/loja.html">MNB SURF BAR</a>
+            <a class="headerlink" href="../site-agendamentohcsurfing18-11-22/sobrenos.html">Relatório</a>
+            <a class="headerlink" href="../site-agendamentohcsurfing18-11-22/agendamento.html">Agendamento</a>
+        </div>
+    </header>
+    <hr>
+
+    <div class="titulos">
+        <h2>Cardápio Mão Na Borda Surf Bar</h2>
+        <div id="produtos">
+
+
+        </div>
+        <h2>Carrinho</h2>
+        <div id="carrinho">
+        </div>
+
+    </div>
+    <script>
+        const items = [{
+                id: 0,
+                nome: "Cerveja Heineken R$10,00",
+                img: "https://santaluzia.vteximg.com.br/arquivos/ids/963474/1156454.jpg?v=637384874251670000",
+                quantidade: 0
+            }, {
+                id: 1,
+                nome: "Cerveja Spaten R$10,00",
+                img: "https://choppbrahmaexpress.vtexassets.com/arquivos/ids/156776/Cerveja-Spaten-Long-Neck-355.jpg?v=637635297363800000",
+                quantidade: 0
+            }, {
+                id: 2,
+                nome: "Cerveja Corona R$12,00",
+                img: "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/cenourao/media/uploads/produtos/foto/gyvtieyi/cerveja-corona-extra-long-neck.jpg",
+                quantidade: 0
+            }, {
+                id: 3,
+                nome: "Cerveja Budweiser R$10,00",
+                img: "https://hiperideal.vteximg.com.br/arquivos/ids/198556-1000-1000/e5c2be12edfd1735b4471e15c6330487_cerveja-budweiser-long-neck-330ml_lett_1.jpg?v=637886512753130000",
+                quantidade: 0
+            }, {
+                id: 4,
+                nome: "Coco Cola Latinha   R$5,00",
+                img: "https://hiperideal.vteximg.com.br/arquivos/ids/197362-1000-1000/55723-4.jpg?v=637830468563800000",
+                quantidade: 0
+            }, {
+                id: 5,
+                nome: "Guarana Antartica latinha     R$5,00",
+                img: "https://www.prabarbebidas.com.br/img/products/refrigerante-guarana-antarctica-lata-pack-c-12un-de-350ml_1_1200.jpg",
+                quantidade: 0
+            }, {
+                id: 6,
+                nome: "Suco Dell Vale 450 ml R$6,00",
+                img: "https://apoioentrega.vteximg.com.br/arquivos/ids/505086/185878_2.jpg?v=637889325081700000",
+                quantidade: 0
+            }, {
+                id: 7,
+                nome: "Agua mineral crystal R$3,00",
+                img: "https://farmaciaindiana.vteximg.com.br/arquivos/ids/206728/7896371000052_0.jpg?v=636748773776470000",
+                quantidade: 0
+            }, {
+                id: 8,
+                nome: "Açai com granola e morango R$20,00",
+                img: "https://www.auau.com.br/image/cache/data/up_system/product-13756/acai-03-1000x1000.jpg",
+                quantidade: 0
+            }
+
+        ]
+        inicializarloja = () => {
+            var containerProdutos = document.getElementById("produtos");
+            items.map((val) => {
+                containerProdutos.innerHTML += `
+                <div class="produto-single">
+                    <img src="` + val.img + `"/>
+                    <p>` + val.nome + `</p>
+                    <a key="` + val.id + `"href="#">Adicionar ao carrinho!</a>
+                    
+                </div>
+                `;
+
+            })
+        }
+
+        inicializarloja();
+
+        atualizarCarrinho = () => {
+            var containerCarrinho = document.getElementById("carrinho");
+            containerCarrinho.innerHTML = "";
+            items.map((val) => {
+                if (val.quantidade > 0) {
+                    containerCarrinho.innerHTML += `
+                <div class="info-single-checkout">
+                <p style="float:left;">Produto: ` + val.nome + ` </p>
+                <p style="float:right;">Quantiade: ` + val.quantidade + ` </p>
+                <div style="clear:both"></div>
+        
+                </div>
+                `;
+                }
+
+            })
+        }
+
+        var links = document.getElementsByTagName("a");
+
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", function() {
+                let key = this.getAttribute("key");
+                items[key].quantidade++;
+                atualizarCarrinho();
+                return false;
+            })
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <div class="wrapper">
+            <div class="footer-box">
+                <div class="company-footer">
+                    <h2>Hot Coast Surfing </h2>
+                    <p>Fabrica de pranchas</p>
+                    <p>O melhor pico de  surf de Navegantes e região </p>
+                    <p>Pista de simulador de surf</p>
+                    <p>Mão Na Borda Surf Bar</p>
+                </div>
+            </div>
+            <div class="footer-box">
+                <div class="estilos-footer">
+                    <h2>Atendimento para a Pista e o nosso Bar</h2>
+                    <br>
+                    <p></p>
+
+                    <p> Das 13:00 as 22:00</p>
+                    <br>
+
+                    <p>Proibido legalizar no pico </p>
+
+                    <p></p>
+                    <br>
+                    <h2>Mão na Borda Surf Bar</h2>
+                    <img src="img/mnbsurfbar.png"  width =" 1420 " height =" 237 " style =" border:0; " allowfullscreen ="" loading =" lazy " referrerpolicy =" no-referrer-when-downgrade ">
+                   
+                </div>
+            </div>
+            <div class="footer-box">
+                <h2>Nos encontre nas redes sociais </h2>
+                <br>
+                <ul class="footer-list">
+                    <li>
+                        <a href="https://www.instagram.com/hotcoastsurfing/">
+                            <img class="insta" src="img/insta.webp" alt="">
+                            <span>Instagram</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://contate.me/hotcoastsurfing">
+                            <img class="insta" src="img/whatsapp-logo-1.png" alt="">
+                            <span>WhatsApp</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100006445920189">
+                            <img class="insta" src="img/facebook_logos_PNG19757.png" alt="">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    
+</body>
+
+</html>
